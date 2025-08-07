@@ -216,10 +216,11 @@ body {
     gap: 3rem;
     margin-bottom: 2rem;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 
 .stat-item {
@@ -229,29 +230,21 @@ body {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 900;
-    color: #ffffff;
-    text-shadow: 
-        0 0 20px rgba(255, 255, 255, 1),
-        0 0 40px rgba(255, 255, 255, 0.8),
-        0 4px 12px rgba(0, 0, 0, 1),
-        0 8px 24px rgba(0, 0, 0, 0.8);
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     line-height: 1;
     margin-bottom: 0.5rem;
-    filter: brightness(1.2);
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.3);
 }
 
 .stat-label {
-    font-size: 0.8rem;
-    color: #ffffff;
-    text-shadow: 
-        0 0 15px rgba(255, 255, 255, 1),
-        0 0 30px rgba(255, 255, 255, 0.6),
-        0 3px 8px rgba(0, 0, 0, 1),
-        0 6px 16px rgba(0, 0, 0, 0.7);
+    font-size: 0.85rem;
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    filter: brightness(1.1);
+    letter-spacing: 1.2px;
+    -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.2);
 }
 
 .hero-buttons {
