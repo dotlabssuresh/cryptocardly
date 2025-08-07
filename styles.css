@@ -8,7 +8,7 @@
     
     /* Text Colors */
     --text-dark: #1e293b;           /* Primary text */
-    --text-light: #64748b;          /* Secondary text */
+    --text-light: #374151;          /* Secondary text - darker for better readability */
     --white: #ffffff;               /* Pure white */
     
     /* Gray Scale */
@@ -4584,14 +4584,15 @@ body {
 
 .stat-label {
     font-size: 0.8rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-top: 0.25rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-weight: 600;
 }
 
 .value-content p {
-    color: var(--text-light);
+    color: var(--text-dark);
     line-height: 1.7;
     margin-bottom: 1.5rem;
     flex-grow: 1;
@@ -4740,8 +4741,9 @@ body {
 
 .comparison-detail {
     font-size: 0.85rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     line-height: 1.4;
+    font-weight: 500;
 }
 
 .advantage-cta {
