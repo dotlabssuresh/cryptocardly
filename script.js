@@ -163,45 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Counter animation for stats
-function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / (duration / 16);
-    
-    const updateCounter = () => {
-        start += increment;
-        if (start < target) {
-            element.textContent = Math.floor(start).toLocaleString();
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = target.toLocaleString();
-        }
-    };
-    
-    updateCounter();
-}
-
-// Animate counters when they come into view
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counter = entry.target;
-            const target = parseInt(counter.textContent.replace(/[^\d]/g, ''));
-            if (target > 0) {
-                animateCounter(counter, target);
-                counterObserver.unobserve(counter);
-            }
-        }
-    });
-}, { threshold: 0.5 });
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Only animate counters that are NOT in excluded sections (hero stats, why-choose stats, about hero stats)
-    const counters = document.querySelectorAll('.stat-number:not(.why-choose-stats .stat-number):not(.hero-stats .stat-number):not(.about-stats .stat-number)');
-    counters.forEach(counter => {
-        counterObserver.observe(counter);
-    });
-});
+// Counter animations removed - displaying static numbers for better performance and UX
 
 // Add hover effects to crypto cards
 document.addEventListener('DOMContentLoaded', () => {
