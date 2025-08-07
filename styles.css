@@ -4334,13 +4334,13 @@ body {
     }
 }
 
-/* Success Stories Section */
-.success-stories-section {
+/* ROI Impact Section */
+.roi-impact-section {
     padding: 5rem 0;
     background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
 }
 
-.success-stories-grid {
+.roi-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -4350,78 +4350,404 @@ body {
     margin-right: auto;
 }
 
-.story-card {
+.roi-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.roi-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.roi-card.primary {
+    border: 2px solid var(--primary-crypto);
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.02), rgba(59, 130, 246, 0.02));
+}
+
+.roi-card.primary::before {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: 1rem;
+    right: -2rem;
+    background: var(--primary-crypto);
+    color: var(--white);
+    padding: 0.5rem 3rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transform: rotate(45deg);
+    letter-spacing: 1px;
+}
+
+.roi-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.roi-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--primary-crypto), var(--secondary-crypto));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.roi-metric {
+    flex: 1;
+}
+
+.metric-value {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-crypto);
+    line-height: 1;
+    display: block;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.roi-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.roi-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.roi-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.roi-details {
+    margin-top: auto;
+}
+
+.roi-point {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--gray-50);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-crypto);
+}
+
+.roi-point i {
+    color: var(--primary-crypto);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.roi-point span {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+/* Business Value Section */
+.business-value-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.value-proposition {
     background: var(--white);
     border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
     border: 1px solid var(--gray-200);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.story-card:hover {
+.value-proposition:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-.story-metric {
+.value-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.value-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary-crypto), var(--secondary-crypto));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.value-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.value-content {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 2px solid var(--light-crypto);
-    text-align: center;
 }
 
-.metric-number {
-    font-size: 2.5rem;
+.value-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: var(--gray-50);
+    border-radius: 12px;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 1.75rem;
     font-weight: 700;
     color: var(--primary-crypto);
     line-height: 1;
-    margin-bottom: 0.25rem;
+    display: block;
 }
 
-.metric-label {
-    font-size: 0.875rem;
+.stat-label {
+    font-size: 0.8rem;
     color: var(--text-light);
+    margin-top: 0.25rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+.value-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.value-features {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.feature-point {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.feature-point i {
+    color: var(--primary-crypto);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.feature-point span {
+    font-size: 0.9rem;
+    color: var(--text-dark);
     font-weight: 500;
 }
 
-.story-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+/* Competitive Advantage Section */
+.competitive-advantage-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
 }
 
-.story-content h3 {
+.comparison-table {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(135deg, var(--primary-crypto), var(--secondary-crypto));
+    color: var(--white);
+}
+
+.comparison-column {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.comparison-column:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.comparison-column h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.comparison-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.comparison-icon.negative {
+    background: rgba(239, 68, 68, 0.2);
+    color: #EF4444;
+}
+
+.comparison-icon.positive {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22C55E;
+}
+
+.comparison-rows {
+    padding: 0;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    border-bottom: 1px solid var(--gray-200);
+    align-items: center;
+    min-height: 80px;
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-metric {
+    padding: 1.5rem;
+    background: var(--gray-50);
+    font-weight: 600;
+    color: var(--text-dark);
+    border-right: 1px solid var(--gray-200);
+}
+
+.comparison-item {
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.comparison-item.negative {
+    background: rgba(239, 68, 68, 0.02);
+    border-right: 1px solid var(--gray-200);
+}
+
+.comparison-item.positive {
+    background: rgba(34, 197, 94, 0.02);
+}
+
+.comparison-value {
     font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.comparison-item.negative .comparison-value {
+    color: #EF4444;
+}
+
+.comparison-item.positive .comparison-value {
+    color: #22C55E;
+}
+
+.comparison-detail {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+.advantage-cta {
+    max-width: 600px;
+    margin: 4rem auto 0;
+    text-align: center;
+    padding: 3rem;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-summary h3 {
+    font-size: 1.75rem;
     font-weight: 600;
     color: var(--text-dark);
     margin-bottom: 1rem;
-    text-align: center;
 }
 
-.story-content p {
+.advantage-summary p {
     color: var(--text-light);
+    font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: auto;
-    font-style: italic;
-    text-align: left;
-    flex-grow: 1;
-}
-
-.story-author {
-    font-size: 0.875rem;
-    color: var(--primary-crypto);
-    font-weight: 500;
-    text-align: right;
-    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 /* Global Infrastructure Section */
@@ -4914,9 +5240,50 @@ body {
 }
 
 @media (max-width: 768px) {
-    .success-stories-grid {
+    .roi-grid,
+    .value-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    
+    .comparison-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+        min-height: auto;
+    }
+    
+    .comparison-metric {
+        border-right: none;
+        border-bottom: 1px solid var(--gray-200);
+        text-align: center;
+    }
+    
+    .comparison-item {
+        border-right: none !important;
+        border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .comparison-item:last-child {
+        border-bottom: none;
+    }
+    
+    .comparison-header {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-column:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .value-stats {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .roi-card.primary::before {
+        display: none;
     }
     
     .infrastructure-item {
@@ -4976,17 +5343,34 @@ body {
         font-size: 2rem;
     }
     
-    .success-stories-section,
-    .global-infrastructure-section,
-    .platform-capabilities-section {
+    .roi-impact-section,
+    .business-value-section,
+    .competitive-advantage-section {
         padding: 3rem 0;
     }
 }
 
 @media (max-width: 480px) {
-    .story-card,
-    .capability-card {
+    .roi-card,
+    .value-proposition {
         padding: 1.5rem;
+    }
+    
+    .advantage-cta {
+        padding: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .comparison-table {
+        margin-top: 2rem;
+    }
+    
+    .metric-value {
+        font-size: 2.2rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
     }
     
     .metric-number {
